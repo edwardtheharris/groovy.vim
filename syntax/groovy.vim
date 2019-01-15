@@ -83,8 +83,8 @@ syn keyword groovyMethodDecl      synchronized throws
 syn keyword groovyClassDecl       extends implements interface
 " to differentiate the keyword class from MyClass.class we use a match here
 syn match   groovyTypedef         "\.\s*\<class\>"ms=s+1
-syn match   groovyExceptions      "\s*[a-zA-Z]*:\s"
-syn match   groovyExceptions         "\s[a-zA-Z]*\s" 
+syn match   groovyTypedef         "\s*[a-zA-Z]*:\s"
+syn match   groovyTypedef         "\.(\s[a-zA-Z]*\s"
 syn keyword groovyClassDecl         enum
 syn match   groovyClassDecl       "^class\>"
 syn match   groovyClassDecl       "[^.]\s*\<class\>"ms=s+1
