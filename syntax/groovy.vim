@@ -78,20 +78,20 @@ syn keyword groovyType            void
 syn keyword groovyType		  Integer Double Date Boolean Float String Array Vector List
 syn keyword groovyStatement       return
 syn keyword groovyStorageClass    static synchronized transient volatile final strictfp serializable
-syn keyword groovyExceptions      throw try catch finally
 syn keyword groovyAssert          assert
 syn keyword groovyMethodDecl      synchronized throws
 syn keyword groovyClassDecl       extends implements interface
-syn match   groovyTypedef         "\s*[a-zA-Z]*:\s"
-syn match   groovyTypedef         "\s[a-zA-Z]*\s" 
 " to differentiate the keyword class from MyClass.class we use a match here
 syn match   groovyTypedef         "\.\s*\<class\>"ms=s+1
+syn match   groovyExceptions      "\s*[a-zA-Z]*:\s"
+syn match   groovyExceptions         "\s[a-zA-Z]*\s" 
 syn keyword groovyClassDecl         enum
 syn match   groovyClassDecl       "^class\>"
 syn match   groovyClassDecl       "[^.]\s*\<class\>"ms=s+1
 syn keyword groovyBranch          break continue nextgroup=groovyUserLabelRef skipwhite
 syn match   groovyUserLabelRef    "\k\+" contained
 syn keyword groovyScopeDecl       public protected private abstract
+syn keyword groovyExceptions      throw try catch finally
 
 
 if exists("groovy_highlight_groovy_lang_ids") || exists("groovy_highlight_groovy_lang") || exists("groovy_highlight_all")
